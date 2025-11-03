@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_home_page_components_feature_cards",
+  "info": {
+    "displayName": "Feature Card"
+  },
+  "options": {},
+  "attributes": {
+    "sectionTag": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "button": {
+      "type": "component",
+      "component": "shared.cta-button",
+      "repeatable": false
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "featureItems": {
+      "type": "component",
+      "component": "home-page-components.feature-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

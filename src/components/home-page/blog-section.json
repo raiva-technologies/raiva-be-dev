@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_home_page_blog_sections",
+  "info": {
+    "displayName": "Blog Section"
+  },
+  "options": {},
+  "attributes": {
+    "sectionTag": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "button": {
+      "type": "component",
+      "component": "shared.cta-button",
+      "repeatable": false
+    },
+    "blogs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::blog.blog"
+    }
+  },
+  "config": {}
+}
