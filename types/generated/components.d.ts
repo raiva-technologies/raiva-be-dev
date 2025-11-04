@@ -1,5 +1,126 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface ContactPageBadge extends Struct.ComponentSchema {
+  collectionName: 'components_contact_page_badges';
+  info: {
+    displayName: 'badge';
+  };
+  attributes: {
+    icon: Schema.Attribute.Component<'shared.icon', true>;
+    text: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface ContactPageContactForm extends Struct.ComponentSchema {
+  collectionName: 'components_contact_page_contact_forms';
+  info: {
+    displayName: 'contact-form';
+  };
+  attributes: {
+    emailLabel: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Email address'>;
+    emailPlaceholder: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Enter your email'>;
+    emailRequired: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    messageLabel: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Write message'>;
+    messagePlaceholder: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Enter your messages'>;
+    messageRequired: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<true>;
+    nameLabel: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Your name'>;
+    namePlaceholder: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Enter your name'>;
+    nameRequired: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    phoneLabel: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Your number'>;
+    phonePlaceholder: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Enter your number'>;
+    phoneRequired: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    settings: Schema.Attribute.Component<'contact-page.form-settings', false>;
+    twoColumnTop: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+  };
+}
+
+export interface ContactPageFormSettings extends Struct.ComponentSchema {
+  collectionName: 'components_contact_page_form_settings';
+  info: {
+    displayName: 'form-settings';
+  };
+  attributes: {
+    consentTextPrefix: Schema.Attribute.Text &
+      Schema.Attribute.DefaultTo<'I agree with the'>;
+    enableRecaptcha: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
+    errorMessage: Schema.Attribute.Text &
+      Schema.Attribute.DefaultTo<'Something went wrong. Please try again.'>;
+    requireConsent: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    submitLabel: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Submit'>;
+    successMessage: Schema.Attribute.Text &
+      Schema.Attribute.DefaultTo<'Thanks! We\u2019ll get back to you soon.'>;
+    termsLink: Schema.Attribute.Component<'shared.link', true>;
+  };
+}
+
+export interface ContactPageGetInTouch extends Struct.ComponentSchema {
+  collectionName: 'components_contact_page_get_in_touches';
+  info: {
+    displayName: 'get-in-touch';
+  };
+  attributes: {
+    badge: Schema.Attribute.Component<'contact-page.badge', true>;
+    buttonLabel: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Contact us'>;
+    description: Schema.Attribute.Text;
+    pillLabel: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Get started'>;
+    placeholder: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Enter your email'>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Get in touch'>;
+  };
+}
+
+export interface ContactPageHero extends Struct.ComponentSchema {
+  collectionName: 'components_contact_page_heroes';
+  info: {
+    displayName: 'hero';
+  };
+  attributes: {
+    headline: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 120;
+      }>;
+    pageTitle: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 60;
+      }>;
+    supportingText: Schema.Attribute.Text;
+  };
+}
+
+export interface ContactPageInfoCard extends Struct.ComponentSchema {
+  collectionName: 'components_contact_page_info_cards';
+  info: {
+    displayName: 'info-card';
+  };
+  attributes: {
+    accentImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    linkUrl: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    value: Schema.Attribute.Text;
+    valueType: Schema.Attribute.Enumeration<
+      ['address', 'email', 'phone', 'text']
+    > &
+      Schema.Attribute.DefaultTo<'text'>;
+  };
+}
+
 export interface HomePageComponentsFeatureCard extends Struct.ComponentSchema {
   collectionName: 'components_home_page_components_feature_cards';
   info: {
@@ -236,6 +357,29 @@ export interface SharedFaqItem extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedIcon extends Struct.ComponentSchema {
+  collectionName: 'components_shared_icons';
+  info: {
+    displayName: 'icon';
+  };
+  attributes: {
+    alt: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface SharedLink extends Struct.ComponentSchema {
+  collectionName: 'components_shared_links';
+  info: {
+    displayName: 'link';
+  };
+  attributes: {
+    label: Schema.Attribute.String & Schema.Attribute.Required;
+    newTab: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    url: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
@@ -301,6 +445,12 @@ export interface SharedSlider extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'contact-page.badge': ContactPageBadge;
+      'contact-page.contact-form': ContactPageContactForm;
+      'contact-page.form-settings': ContactPageFormSettings;
+      'contact-page.get-in-touch': ContactPageGetInTouch;
+      'contact-page.hero': ContactPageHero;
+      'contact-page.info-card': ContactPageInfoCard;
       'home-page-components.feature-card': HomePageComponentsFeatureCard;
       'home-page-components.feature-item': HomePageComponentsFeatureItem;
       'home-page-components.service-card': HomePageComponentsServiceCard;
@@ -317,6 +467,8 @@ declare module '@strapi/strapi' {
       'shared.avatar': SharedAvatar;
       'shared.cta-button': SharedCtaButton;
       'shared.faq-item': SharedFaqItem;
+      'shared.icon': SharedIcon;
+      'shared.link': SharedLink;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;

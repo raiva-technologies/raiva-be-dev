@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_contact_page_form_settings",
+  "info": {
+    "displayName": "form-settings"
+  },
+  "options": {},
+ "attributes": {
+    "submitLabel": {
+      "type": "string",
+      "default": "Submit"
+    },
+    "successMessage": {
+      "type": "text",
+      "default": "Thanks! We’ll get back to you soon."
+    },
+    "errorMessage": {
+      "type": "text",
+      "default": "Something went wrong. Please try again."
+    },
+    "requireConsent": {
+      "type": "boolean",
+      "default": true
+    },
+    "consentTextPrefix": {
+      "type": "text",
+      "default": "I agree with the"
+    },
+    "termsLink": {
+      "type": "component",
+      "component": "shared.link",
+      "repeatable": true
+    },
+    "enableRecaptcha": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "config": {}
+}

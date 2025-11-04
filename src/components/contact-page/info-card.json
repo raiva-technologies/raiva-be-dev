@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_contact_page_info_cards",
+  "info": {
+    "displayName": "info-card"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "value": {
+      "type": "text"
+    },
+    "valueType": {
+      "type": "enumeration",
+      "default": "text",
+      "enum": [
+        "address",
+        "email",
+        "phone",
+        "text"
+      ]
+    },
+    "linkUrl": {
+      "type": "string"
+    },
+    "accentImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

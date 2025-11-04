@@ -1,0 +1,67 @@
+{
+  "collectionName": "components_contact_page_contact_forms",
+  "info": {
+    "displayName": "contact-form"
+  },
+  "options": {},
+  "attributes": {
+    "twoColumnTop": {
+      "type": "boolean",
+      "default": true
+    },
+    "nameLabel": {
+      "type": "string",
+      "default": "Your name"
+    },
+    "namePlaceholder": {
+      "type": "string",
+      "default": "Enter your name"
+    },
+    "nameRequired": {
+      "type": "boolean",
+      "default": true
+    },
+    "phoneLabel": {
+      "type": "string",
+      "default": "Your number"
+    },
+    "phonePlaceholder": {
+      "type": "string",
+      "default": "Enter your number"
+    },
+    "phoneRequired": {
+      "type": "boolean",
+      "default": true
+    },
+    "emailLabel": {
+      "type": "string",
+      "default": "Email address"
+    },
+    "emailPlaceholder": {
+      "type": "string",
+      "default": "Enter your email"
+    },
+    "emailRequired": {
+      "type": "boolean",
+      "default": true
+    },
+    "messageLabel": {
+      "type": "string",
+      "default": "Write message"
+    },
+    "messagePlaceholder": {
+      "type": "string",
+      "default": "Enter your messages"
+    },
+    "messageRequired": {
+      "type": "boolean",
+      "default": true
+    },
+    "settings": {
+      "type": "component",
+      "component": "contact-page.form-settings",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}
