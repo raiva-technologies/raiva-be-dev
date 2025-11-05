@@ -434,6 +434,30 @@ export interface HomePageTimelineSection extends Struct.ComponentSchema {
   };
 }
 
+export interface LegalPageHero extends Struct.ComponentSchema {
+  collectionName: 'components_legal_page_heroes';
+  info: {
+    displayName: 'hero';
+  };
+  attributes: {
+    pageTitle: Schema.Attribute.String;
+    sectionId: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'privacy-hero'>;
+  };
+}
+
+export interface LegalPageSection extends Struct.ComponentSchema {
+  collectionName: 'components_legal_page_sections';
+  info: {
+    displayName: 'section';
+  };
+  attributes: {
+    body: Schema.Attribute.Component<'shared.text', true>;
+    btnLabel: Schema.Attribute.String;
+    heading: Schema.Attribute.String;
+  };
+}
+
 export interface SharedAvatar extends Struct.ComponentSchema {
   collectionName: 'components_shared_avatars';
   info: {
@@ -553,6 +577,16 @@ export interface SharedSlider extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedText extends Struct.ComponentSchema {
+  collectionName: 'components_shared_texts';
+  info: {
+    displayName: 'text';
+  };
+  attributes: {
+    text: Schema.Attribute.Text;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -583,6 +617,8 @@ declare module '@strapi/strapi' {
       'home-page.review-section': HomePageReviewSection;
       'home-page.service-section': HomePageServiceSection;
       'home-page.timeline-section': HomePageTimelineSection;
+      'legal-page.hero': LegalPageHero;
+      'legal-page.section': LegalPageSection;
       'shared.avatar': SharedAvatar;
       'shared.cta-button': SharedCtaButton;
       'shared.faq-item': SharedFaqItem;
@@ -593,6 +629,7 @@ declare module '@strapi/strapi' {
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
+      'shared.text': SharedText;
     }
   }
 }

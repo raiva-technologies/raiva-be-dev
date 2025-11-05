@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_legal_page_sections",
+  "info": {
+    "displayName": "section"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "body": {
+      "type": "component",
+      "component": "shared.text",
+      "repeatable": true
+    },
+    "btnLabel": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

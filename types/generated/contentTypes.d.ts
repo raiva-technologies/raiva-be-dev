@@ -630,6 +630,35 @@ export interface ApiContactUsPageContactUsPage extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiGdprGdpr extends Struct.SingleTypeSchema {
+  collectionName: 'gdprs';
+  info: {
+    displayName: 'GDPR';
+    pluralName: 'gdprs';
+    singularName: 'gdpr';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    blocks: Schema.Attribute.DynamicZone<
+      ['shared.cta-button', 'shared.rich-text', 'shared.media']
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    getStarted: Schema.Attribute.Component<'contact-page.get-in-touch', false>;
+    hero: Schema.Attribute.Component<'legal-page.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::gdpr.gdpr'> &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   collectionName: 'globals';
   info: {
@@ -696,6 +725,38 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
       ]
     >;
     seo: Schema.Attribute.Component<'shared.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPrivacyPrivacy extends Struct.SingleTypeSchema {
+  collectionName: 'privacies';
+  info: {
+    displayName: 'Privacy';
+    pluralName: 'privacies';
+    singularName: 'privacy';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    blocks: Schema.Attribute.DynamicZone<
+      ['shared.cta-button', 'shared.rich-text', 'shared.media']
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    getStarted: Schema.Attribute.Component<'contact-page.get-in-touch', false>;
+    hero: Schema.Attribute.Component<'legal-page.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::privacy.privacy'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1249,8 +1310,10 @@ declare module '@strapi/strapi' {
       'api::blog-page.blog-page': ApiBlogPageBlogPage;
       'api::category.category': ApiCategoryCategory;
       'api::contact-us-page.contact-us-page': ApiContactUsPageContactUsPage;
+      'api::gdpr.gdpr': ApiGdprGdpr;
       'api::global.global': ApiGlobalGlobal;
       'api::home-page.home-page': ApiHomePageHomePage;
+      'api::privacy.privacy': ApiPrivacyPrivacy;
       'api::review.review': ApiReviewReview;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
