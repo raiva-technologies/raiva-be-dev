@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_about_page_experience_stats",
+  "info": {
+    "displayName": "Experience Stat"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "color": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}

@@ -1,5 +1,117 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface AboutPageAboutSection extends Struct.ComponentSchema {
+  collectionName: 'components_about_page_about_sections';
+  info: {
+    displayName: 'About Section';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    features: Schema.Attribute.Component<'about-page.feature', true>;
+    mainImage: Schema.Attribute.Media<'images'>;
+    overlayImage: Schema.Attribute.Media<'images'>;
+    sectionTag: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface AboutPageExperienceSection extends Struct.ComponentSchema {
+  collectionName: 'components_about_page_experience_sections';
+  info: {
+    displayName: 'Experience Section';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    stats: Schema.Attribute.Component<'about-page.experience-stat', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface AboutPageExperienceStat extends Struct.ComponentSchema {
+  collectionName: 'components_about_page_experience_stats';
+  info: {
+    displayName: 'Experience Stat';
+  };
+  attributes: {
+    color: Schema.Attribute.String;
+    icon: Schema.Attribute.Media<'images'>;
+    label: Schema.Attribute.String;
+  };
+}
+
+export interface AboutPageFeature extends Struct.ComponentSchema {
+  collectionName: 'components_about_page_features';
+  info: {
+    displayName: 'Feature';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    icon: Schema.Attribute.Media<'images'>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface AboutPageHeroSection extends Struct.ComponentSchema {
+  collectionName: 'components_about_page_hero_sections';
+  info: {
+    displayName: 'Hero Section';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    leftBottomImage: Schema.Attribute.Media<'images'>;
+    leftTopImage: Schema.Attribute.Media<'images'>;
+    rightImage: Schema.Attribute.Media<'images'>;
+    sectionTag: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface AboutPageMissionSection extends Struct.ComponentSchema {
+  collectionName: 'components_about_page_mission_sections';
+  info: {
+    displayName: 'Mission Section';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    mission: Schema.Attribute.Component<'about-page.section-card', false>;
+    sectionTag: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface AboutPageReviewSection extends Struct.ComponentSchema {
+  collectionName: 'components_about_page_review_sections';
+  info: {
+    displayName: 'Review Section';
+  };
+  attributes: {
+    button: Schema.Attribute.Component<'shared.cta-button', false>;
+    description: Schema.Attribute.Text;
+    reviews: Schema.Attribute.Relation<'oneToMany', 'api::review.review'>;
+    sectionTag: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface AboutPageSectionCard extends Struct.ComponentSchema {
+  collectionName: 'components_about_page_section_cards';
+  info: {
+    displayName: 'Mission Card';
+  };
+  attributes: {
+    bottomAvatars: Schema.Attribute.Media<'images', true>;
+    bottomCardRole: Schema.Attribute.String;
+    bottomCardTitle: Schema.Attribute.String;
+    mainCardTitle: Schema.Attribute.String;
+    progressImage: Schema.Attribute.Media<'images'>;
+    progressTitle: Schema.Attribute.String;
+    timeLabel: Schema.Attribute.String;
+    userAvatar: Schema.Attribute.Media<'images'>;
+    userName: Schema.Attribute.String;
+    userRole: Schema.Attribute.String;
+  };
+}
+
 export interface ContactPageBadge extends Struct.ComponentSchema {
   collectionName: 'components_contact_page_badges';
   info: {
@@ -445,6 +557,14 @@ export interface SharedSlider extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'about-page.about-section': AboutPageAboutSection;
+      'about-page.experience-section': AboutPageExperienceSection;
+      'about-page.experience-stat': AboutPageExperienceStat;
+      'about-page.feature': AboutPageFeature;
+      'about-page.hero-section': AboutPageHeroSection;
+      'about-page.mission-section': AboutPageMissionSection;
+      'about-page.review-section': AboutPageReviewSection;
+      'about-page.section-card': AboutPageSectionCard;
       'contact-page.badge': ContactPageBadge;
       'contact-page.contact-form': ContactPageContactForm;
       'contact-page.form-settings': ContactPageFormSettings;
