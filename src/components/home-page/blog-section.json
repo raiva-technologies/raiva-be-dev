@@ -18,11 +18,6 @@
       "type": "component",
       "component": "shared.cta-button",
       "repeatable": false
-    },
-    "blogs": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::blog.blog"
     }
   },
   "config": {}

@@ -310,7 +310,6 @@ export interface HomePageBlogSection extends Struct.ComponentSchema {
     displayName: 'Blog Section';
   };
   attributes: {
-    blogs: Schema.Attribute.Relation<'oneToMany', 'api::blog.blog'>;
     button: Schema.Attribute.Component<'shared.cta-button', false>;
     description: Schema.Attribute.String;
     sectionTag: Schema.Attribute.String;

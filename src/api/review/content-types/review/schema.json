@@ -21,6 +21,9 @@
       "type": "component",
       "component": "shared.avatar",
       "repeatable": false
+    },
+    "rating": {
+      "type": "integer"
     }
   }
 }
