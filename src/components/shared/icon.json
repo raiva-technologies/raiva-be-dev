@@ -17,6 +17,12 @@
     },
     "alt": {
       "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "info": {
+      "type": "string"
     }
   },
   "config": {}

@@ -4,18 +4,10 @@
     "displayName": "form-settings"
   },
   "options": {},
- "attributes": {
+  "attributes": {
     "submitLabel": {
       "type": "string",
       "default": "Submit"
-    },
-    "successMessage": {
-      "type": "text",
-      "default": "Thanks! We’ll get back to you soon."
-    },
-    "errorMessage": {
-      "type": "text",
-      "default": "Something went wrong. Please try again."
     },
     "requireConsent": {
       "type": "boolean",

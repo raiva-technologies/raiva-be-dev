@@ -29,6 +29,11 @@
     "mapLink": {
       "type": "text",
       "required": true
+    },
+    "getInTouch": {
+      "type": "component",
+      "component": "contact-page.get-in-touch",
+      "repeatable": false
     }
   }
 }
