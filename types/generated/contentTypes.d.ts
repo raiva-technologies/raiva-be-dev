@@ -616,7 +616,7 @@ export interface ApiContactUsPageContactUsPage extends Struct.SingleTypeSchema {
     form: Schema.Attribute.Component<'contact-page.contact-form', false>;
     getInTouch: Schema.Attribute.Component<'contact-page.get-in-touch', false>;
     hero: Schema.Attribute.Component<'contact-page.hero', false>;
-    icon: Schema.Attribute.Component<'shared.icon', true>;
+    infoCard: Schema.Attribute.Component<'legal-page.info-card', true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',

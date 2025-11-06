@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_legal_page_info_cards",
+  "info": {
+    "displayName": "info-card"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "info": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "component",
+      "component": "shared.icon",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}
