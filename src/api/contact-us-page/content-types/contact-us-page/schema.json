@@ -16,9 +16,9 @@
       "component": "contact-page.hero",
       "repeatable": false
     },
-    "icon": {
+    "infoCard": {
       "type": "component",
-      "component": "shared.icon",
+      "component": "legal-page.info-card",
       "repeatable": true
     },
     "form": {

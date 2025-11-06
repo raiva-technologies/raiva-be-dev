@@ -178,8 +178,7 @@ export interface ContactPageGetInTouch extends Struct.ComponentSchema {
   };
   attributes: {
     badge: Schema.Attribute.Component<'contact-page.badge', true>;
-    buttonLabel: Schema.Attribute.String &
-      Schema.Attribute.DefaultTo<'Contact us'>;
+    button: Schema.Attribute.Component<'shared.cta-button', false>;
     description: Schema.Attribute.Text;
     pillLabel: Schema.Attribute.String &
       Schema.Attribute.Required &
@@ -442,6 +441,18 @@ export interface LegalPageHero extends Struct.ComponentSchema {
   };
 }
 
+export interface LegalPageInfoCard extends Struct.ComponentSchema {
+  collectionName: 'components_legal_page_info_cards';
+  info: {
+    displayName: 'info-card';
+  };
+  attributes: {
+    icon: Schema.Attribute.Component<'shared.icon', false>;
+    info: Schema.Attribute.String;
+    label: Schema.Attribute.String;
+  };
+}
+
 export interface LegalPageSection extends Struct.ComponentSchema {
   collectionName: 'components_legal_page_sections';
   info: {
@@ -496,8 +507,6 @@ export interface SharedIcon extends Struct.ComponentSchema {
   attributes: {
     alt: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    info: Schema.Attribute.String;
-    label: Schema.Attribute.String;
   };
 }
 
@@ -616,6 +625,7 @@ declare module '@strapi/strapi' {
       'home-page.service-section': HomePageServiceSection;
       'home-page.timeline-section': HomePageTimelineSection;
       'legal-page.hero': LegalPageHero;
+      'legal-page.info-card': LegalPageInfoCard;
       'legal-page.section': LegalPageSection;
       'shared.avatar': SharedAvatar;
       'shared.cta-button': SharedCtaButton;
