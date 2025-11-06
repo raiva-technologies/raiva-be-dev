@@ -500,6 +500,8 @@ export interface SharedIcon extends Struct.ComponentSchema {
   attributes: {
     alt: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    info: Schema.Attribute.String;
+    label: Schema.Attribute.String;
   };
 }
 
