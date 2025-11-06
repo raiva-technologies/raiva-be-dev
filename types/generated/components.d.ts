@@ -165,12 +165,8 @@ export interface ContactPageFormSettings extends Struct.ComponentSchema {
       Schema.Attribute.DefaultTo<'I agree with the'>;
     enableRecaptcha: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
-    errorMessage: Schema.Attribute.Text &
-      Schema.Attribute.DefaultTo<'Something went wrong. Please try again.'>;
     requireConsent: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
     submitLabel: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Submit'>;
-    successMessage: Schema.Attribute.Text &
-      Schema.Attribute.DefaultTo<'Thanks! We\u2019ll get back to you soon.'>;
     termsLink: Schema.Attribute.Component<'shared.link', true>;
   };
 }
