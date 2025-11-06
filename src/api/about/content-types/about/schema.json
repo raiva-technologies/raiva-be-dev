@@ -4,7 +4,7 @@
   "info": {
     "singularName": "about",
     "pluralName": "abouts",
-    "displayName": "About",
+    "displayName": "About Us Page",
     "description": "Write about yourself and the content you create"
   },
   "options": {
@@ -12,12 +12,18 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
+    "heading": {
       "type": "string"
     },
-    "blocks": {
+    "sections": {
       "type": "dynamiczone",
-      "components": ["shared.media", "shared.quote", "shared.rich-text", "shared.slider"]
+      "components": [
+        "about-page.hero-section",
+        "about-page.review-section",
+        "about-page.mission-section",
+        "about-page.experience-section",
+        "about-page.about-section"
+      ]
     }
   }
 }

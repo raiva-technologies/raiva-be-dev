@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_contact_page_badges",
+  "info": {
+    "displayName": "badge"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string",
+      "required": true
+    },
+    "icon": {
+      "type": "component",
+      "component": "shared.icon",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

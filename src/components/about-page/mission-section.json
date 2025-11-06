@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_about_page_mission_sections",
+  "info": {
+    "displayName": "Mission Section"
+  },
+  "options": {},
+  "attributes": {
+    "sectionTag": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "mission": {
+      "type": "component",
+      "component": "about-page.section-card",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

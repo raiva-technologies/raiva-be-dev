@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_home_page_feature_sections",
+  "info": {
+    "displayName": "Feature Section"
+  },
+  "options": {},
+  "attributes": {
+    "features": {
+      "type": "component",
+      "component": "home-page-components.feature-card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_about_page_experience_sections",
+  "info": {
+    "displayName": "Experience Section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "stats": {
+      "type": "component",
+      "component": "about-page.experience-stat",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_contact_page_get_in_touches",
+  "info": {
+    "displayName": "get-in-touch"
+  },
+  "options": {},
+  "attributes": {
+    "pillLabel": {
+      "type": "string",
+      "default": "Get started",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "default": "Get in touch",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "placeholder": {
+      "type": "string",
+      "default": "Enter your email",
+      "required": false
+    },
+    "buttonLabel": {
+      "type": "string",
+      "default": "Contact us"
+    },
+    "badge": {
+      "type": "component",
+      "component": "contact-page.badge",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

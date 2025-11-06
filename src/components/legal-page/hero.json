@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_legal_page_heroes",
+  "info": {
+    "displayName": "hero"
+  },
+  "options": {},
+  "attributes": {
+    "pageTitle": {
+      "type": "string"
+    },
+    "sectionId": {
+      "type": "string",
+      "default": "privacy-hero"
+    }
+  },
+  "config": {}
+}
