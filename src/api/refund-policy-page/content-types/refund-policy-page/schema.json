@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "gdprs",
+  "collectionName": "refund_policy_pages",
   "info": {
-    "singularName": "gdpr",
-    "pluralName": "gdprs",
-    "displayName": "GDPR Page"
+    "singularName": "refund-policy-page",
+    "pluralName": "refund-policy-pages",
+    "displayName": "Refund Policy Page"
   },
   "options": {
     "draftAndPublish": true
@@ -13,8 +13,8 @@
   "attributes": {
     "seo": {
       "type": "component",
-      "component": "shared.seo",
-      "repeatable": true
+      "component": "shared.rich-text",
+      "repeatable": false
     },
     "title": {
       "type": "string"
@@ -22,15 +22,10 @@
     "blocks": {
       "type": "dynamiczone",
       "components": [
-        "shared.cta-button",
+        "shared.seo",
         "shared.rich-text",
         "shared.media"
       ]
-    },
-    "getStarted": {
-      "type": "component",
-      "component": "contact-page.get-in-touch",
-      "repeatable": false
     }
   }
 }
