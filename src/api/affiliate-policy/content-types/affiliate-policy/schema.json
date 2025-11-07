@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "gdprs",
+  "collectionName": "affiliate_policies",
   "info": {
-    "singularName": "gdpr",
-    "pluralName": "gdprs",
-    "displayName": "GDPR Page"
+    "singularName": "affiliate-policy",
+    "pluralName": "affiliate-policies",
+    "displayName": "Affiliate Policy Page"
   },
   "options": {
     "draftAndPublish": true
@@ -14,7 +14,7 @@
     "seo": {
       "type": "component",
       "component": "shared.seo",
-      "repeatable": true
+      "repeatable": false
     },
     "title": {
       "type": "string"
@@ -22,15 +22,10 @@
     "blocks": {
       "type": "dynamiczone",
       "components": [
-        "shared.cta-button",
         "shared.rich-text",
-        "shared.media"
+        "shared.media",
+        "shared.cta-button"
       ]
-    },
-    "getStarted": {
-      "type": "component",
-      "component": "contact-page.get-in-touch",
-      "repeatable": false
     }
   }
 }

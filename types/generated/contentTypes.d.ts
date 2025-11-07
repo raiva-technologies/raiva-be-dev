@@ -465,6 +465,39 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiAffiliatePolicyAffiliatePolicy
+  extends Struct.SingleTypeSchema {
+  collectionName: 'affiliate_policies';
+  info: {
+    displayName: 'Affiliate Policy Page';
+    pluralName: 'affiliate-policies';
+    singularName: 'affiliate-policy';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    blocks: Schema.Attribute.DynamicZone<
+      ['shared.rich-text', 'shared.media', 'shared.cta-button']
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::affiliate-policy.affiliate-policy'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
   collectionName: 'articles';
   info: {
@@ -634,7 +667,7 @@ export interface ApiContactUsPageContactUsPage extends Struct.SingleTypeSchema {
 export interface ApiGdprGdpr extends Struct.SingleTypeSchema {
   collectionName: 'gdprs';
   info: {
-    displayName: 'GDPR';
+    displayName: 'GDPR Page';
     pluralName: 'gdprs';
     singularName: 'gdpr';
   };
@@ -649,11 +682,12 @@ export interface ApiGdprGdpr extends Struct.SingleTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     getStarted: Schema.Attribute.Component<'contact-page.get-in-touch', false>;
-    hero: Schema.Attribute.Component<'legal-page.hero', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::gdpr.gdpr'> &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'shared.seo', true>;
+    title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -735,7 +769,7 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
 export interface ApiPrivacyPrivacy extends Struct.SingleTypeSchema {
   collectionName: 'privacies';
   info: {
-    displayName: 'Privacy';
+    displayName: 'Privacy Policy Page';
     pluralName: 'privacies';
     singularName: 'privacy';
   };
@@ -750,7 +784,6 @@ export interface ApiPrivacyPrivacy extends Struct.SingleTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     getStarted: Schema.Attribute.Component<'contact-page.get-in-touch', false>;
-    hero: Schema.Attribute.Component<'legal-page.hero', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -758,6 +791,41 @@ export interface ApiPrivacyPrivacy extends Struct.SingleTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiRefundPolicyPageRefundPolicyPage
+  extends Struct.SingleTypeSchema {
+  collectionName: 'refund_policy_pages';
+  info: {
+    displayName: 'Refund Policy Page';
+    pluralName: 'refund-policy-pages';
+    singularName: 'refund-policy-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    blocks: Schema.Attribute.DynamicZone<
+      ['shared.seo', 'shared.rich-text', 'shared.media']
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::refund-policy-page.refund-policy-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'shared.rich-text', false>;
+    title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -789,6 +857,39 @@ export interface ApiReviewReview extends Struct.CollectionTypeSchema {
     location: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     rating: Schema.Attribute.Integer;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiTermsAndConditionPageTermsAndConditionPage
+  extends Struct.SingleTypeSchema {
+  collectionName: 'terms_and_condition_pages';
+  info: {
+    displayName: 'Terms and Condition Page';
+    pluralName: 'terms-and-condition-pages';
+    singularName: 'terms-and-condition-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    blocks: Schema.Attribute.DynamicZone<
+      ['shared.rich-text', 'shared.media', 'shared.cta-button']
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::terms-and-condition-page.terms-and-condition-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
+    title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1306,6 +1407,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::about.about': ApiAboutAbout;
+      'api::affiliate-policy.affiliate-policy': ApiAffiliatePolicyAffiliatePolicy;
       'api::article.article': ApiArticleArticle;
       'api::author.author': ApiAuthorAuthor;
       'api::blog-page.blog-page': ApiBlogPageBlogPage;
@@ -1315,7 +1417,9 @@ declare module '@strapi/strapi' {
       'api::global.global': ApiGlobalGlobal;
       'api::home-page.home-page': ApiHomePageHomePage;
       'api::privacy.privacy': ApiPrivacyPrivacy;
+      'api::refund-policy-page.refund-policy-page': ApiRefundPolicyPageRefundPolicyPage;
       'api::review.review': ApiReviewReview;
+      'api::terms-and-condition-page.terms-and-condition-page': ApiTermsAndConditionPageTermsAndConditionPage;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
