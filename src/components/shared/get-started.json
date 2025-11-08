@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_shared_get_starteds",
+  "info": {
+    "displayName": "Get Started"
+  },
+  "options": {},
+  "attributes": {
+    "tag": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "badges": {
+      "type": "component",
+      "component": "shared.text",
+      "repeatable": true
+    },
+    "button": {
+      "type": "component",
+      "component": "shared.cta-button",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

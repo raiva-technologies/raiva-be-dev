@@ -26,6 +26,11 @@
         "shared.media",
         "shared.cta-button"
       ]
+    },
+    "getStarted": {
+      "type": "component",
+      "component": "shared.get-started",
+      "repeatable": false
     }
   }
 }

@@ -9,6 +9,11 @@
   "attributes": {
     "body": {
       "type": "richtext"
+    },
+    "get": {
+      "type": "component",
+      "component": "shared.get-started",
+      "repeatable": false
     }
   }
 }
