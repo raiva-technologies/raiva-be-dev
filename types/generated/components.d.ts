@@ -506,6 +506,7 @@ export interface SharedGetStarted extends Struct.ComponentSchema {
   };
   attributes: {
     badges: Schema.Attribute.Component<'shared.text', true>;
+    button: Schema.Attribute.Component<'shared.cta-button', false>;
     description: Schema.Attribute.String;
     tag: Schema.Attribute.String;
     title: Schema.Attribute.String;

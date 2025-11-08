@@ -18,6 +18,11 @@
       "type": "component",
       "component": "shared.text",
       "repeatable": true
+    },
+    "button": {
+      "type": "component",
+      "component": "shared.cta-button",
+      "repeatable": false
     }
   },
   "config": {}
