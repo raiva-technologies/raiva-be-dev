@@ -484,7 +484,7 @@ export interface SharedCtaButton extends Struct.ComponentSchema {
   attributes: {
     label: Schema.Attribute.String;
     link: Schema.Attribute.String;
-    type: Schema.Attribute.Enumeration<['primary', 'secondary']>;
+    type: Schema.Attribute.Enumeration<['primary', 'secondary', 'white']>;
   };
 }
 
@@ -495,6 +495,19 @@ export interface SharedFaqItem extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedGetStarted extends Struct.ComponentSchema {
+  collectionName: 'components_shared_get_starteds';
+  info: {
+    displayName: 'Get Started';
+  };
+  attributes: {
+    badges: Schema.Attribute.Component<'shared.text', true>;
+    description: Schema.Attribute.String;
+    tag: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
 }
@@ -554,6 +567,7 @@ export interface SharedRichText extends Struct.ComponentSchema {
   };
   attributes: {
     body: Schema.Attribute.RichText;
+    get: Schema.Attribute.Component<'shared.get-started', false>;
   };
 }
 
@@ -630,6 +644,7 @@ declare module '@strapi/strapi' {
       'shared.avatar': SharedAvatar;
       'shared.cta-button': SharedCtaButton;
       'shared.faq-item': SharedFaqItem;
+      'shared.get-started': SharedGetStarted;
       'shared.icon': SharedIcon;
       'shared.link': SharedLink;
       'shared.media': SharedMedia;

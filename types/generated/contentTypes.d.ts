@@ -483,6 +483,7 @@ export interface ApiAffiliatePolicyAffiliatePolicy
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    getStarted: Schema.Attribute.Component<'shared.get-started', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -681,7 +682,7 @@ export interface ApiGdprGdpr extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    getStarted: Schema.Attribute.Component<'contact-page.get-in-touch', false>;
+    getStarted: Schema.Attribute.Component<'shared.get-started', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::gdpr.gdpr'> &
       Schema.Attribute.Private;
@@ -783,7 +784,7 @@ export interface ApiPrivacyPrivacy extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    getStarted: Schema.Attribute.Component<'contact-page.get-in-touch', false>;
+    getStarted: Schema.Attribute.Component<'shared.get-started', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -817,6 +818,7 @@ export interface ApiRefundPolicyPageRefundPolicyPage
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    getStarted: Schema.Attribute.Component<'shared.get-started', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -881,6 +883,7 @@ export interface ApiTermsAndConditionPageTermsAndConditionPage
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    getStarted: Schema.Attribute.Component<'shared.get-started', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',

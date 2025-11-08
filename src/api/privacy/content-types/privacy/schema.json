@@ -29,7 +29,7 @@
     },
     "getStarted": {
       "type": "component",
-      "component": "contact-page.get-in-touch",
+      "component": "shared.get-started",
       "repeatable": false
     }
   }
