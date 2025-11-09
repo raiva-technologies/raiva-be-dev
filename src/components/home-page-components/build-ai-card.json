@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_home_page_components_feature_cards",
+  "collectionName": "components_home_page_components_build_ai_cards",
   "info": {
-    "displayName": "Feature Card"
+    "displayName": "Build Ai Card"
   },
   "options": {},
   "attributes": {
@@ -11,9 +11,9 @@
     "description": {
       "type": "text"
     },
-    "icon": {
+    "workflowImages": {
       "type": "media",
-      "multiple": false,
+      "multiple": true,
       "allowedTypes": [
         "images"
       ]

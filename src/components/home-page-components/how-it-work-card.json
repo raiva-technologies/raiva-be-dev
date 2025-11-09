@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_home_page_components_feature_cards",
+  "collectionName": "components_home_page_components_how_it_work_cards",
   "info": {
-    "displayName": "Feature Card"
+    "displayName": "How It Work Card"
   },
   "options": {},
   "attributes": {
@@ -17,6 +17,9 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "backgroundColor": {
+      "type": "string"
     }
   },
   "config": {}

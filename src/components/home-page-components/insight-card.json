@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_home_page_components_insight_cards",
+  "info": {
+    "displayName": "Insight Card"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "avatars": {
+      "type": "component",
+      "component": "shared.avatar",
+      "repeatable": true
+    },
+    "title": {
+      "type": "string"
+    },
+    "year": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

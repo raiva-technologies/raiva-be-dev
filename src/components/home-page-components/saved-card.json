@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_home_page_components_saved_cards",
+  "info": {
+    "displayName": "Saved Card"
+  },
+  "options": {},
+  "attributes": {
+    "price": {
+      "type": "string"
+    },
+    "percentage": {
+      "type": "integer"
+    },
+    "button": {
+      "type": "component",
+      "component": "shared.cta-button",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

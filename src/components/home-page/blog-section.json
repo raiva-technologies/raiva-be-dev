@@ -18,6 +18,16 @@
       "type": "component",
       "component": "shared.cta-button",
       "repeatable": false
+    },
+    "featureArticle": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::article.article"
+    },
+    "articles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article.article"
     }
   },
   "config": {}

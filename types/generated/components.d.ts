@@ -228,74 +228,191 @@ export interface ContactPageInfoCard extends Struct.ComponentSchema {
   };
 }
 
+export interface HomePageComponentsAiDeviceCard extends Struct.ComponentSchema {
+  collectionName: 'components_home_page_components_ai_device_cards';
+  info: {
+    displayName: 'AI Device Card';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images'>;
+    percentage: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface HomePageComponentsAiPoweredCard
+  extends Struct.ComponentSchema {
+  collectionName: 'components_home_page_components_ai_powered_cards';
+  info: {
+    displayName: 'AI Powered Card';
+  };
+  attributes: {
+    backgroundColor: Schema.Attribute.String;
+    label: Schema.Attribute.String;
+  };
+}
+
+export interface HomePageComponentsAwardWiningCard
+  extends Struct.ComponentSchema {
+  collectionName: 'components_home_page_components_award_wining_cards';
+  info: {
+    displayName: 'Award Wining Card';
+  };
+  attributes: {
+    backgroundColor: Schema.Attribute.String;
+    label: Schema.Attribute.String;
+  };
+}
+
+export interface HomePageComponentsBuildAiCard extends Struct.ComponentSchema {
+  collectionName: 'components_home_page_components_build_ai_cards';
+  info: {
+    displayName: 'Build Ai Card';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+    workflowImages: Schema.Attribute.Media<'images', true>;
+  };
+}
+
+export interface HomePageComponentsCircularProgress
+  extends Struct.ComponentSchema {
+  collectionName: 'components_home_page_components_circular_progresses';
+  info: {
+    displayName: 'Circular Progress';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images'>;
+    label: Schema.Attribute.String;
+    percent: Schema.Attribute.Integer;
+  };
+}
+
 export interface HomePageComponentsFeatureCard extends Struct.ComponentSchema {
   collectionName: 'components_home_page_components_feature_cards';
   info: {
     displayName: 'Feature Card';
   };
   attributes: {
-    button: Schema.Attribute.Component<'shared.cta-button', false>;
-    description: Schema.Attribute.Text;
-    featureItems: Schema.Attribute.Component<
-      'home-page-components.feature-item',
-      true
-    >;
-    image: Schema.Attribute.Media<'images'>;
-    sectionTag: Schema.Attribute.String;
-    title: Schema.Attribute.String;
-  };
-}
-
-export interface HomePageComponentsFeatureItem extends Struct.ComponentSchema {
-  collectionName: 'components_home_page_components_feature_items';
-  info: {
-    displayName: 'Feature Item';
-  };
-  attributes: {
     description: Schema.Attribute.Text;
     icon: Schema.Attribute.Media<'images'>;
     title: Schema.Attribute.String;
   };
 }
 
-export interface HomePageComponentsServiceCard extends Struct.ComponentSchema {
-  collectionName: 'components_home_page_components_service_cards';
-  info: {
-    displayName: 'Service Card';
-  };
-  attributes: {
-    button: Schema.Attribute.Component<'shared.cta-button', false>;
-    description: Schema.Attribute.String;
-    icon: Schema.Attribute.Media<'images'>;
-    image: Schema.Attribute.Media<'images'>;
-    isFeatured: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    title: Schema.Attribute.String;
-  };
-}
-
-export interface HomePageComponentsTimelineCard extends Struct.ComponentSchema {
-  collectionName: 'components_home_page_components_timeline_cards';
-  info: {
-    displayName: 'Timeline Card';
-  };
-  attributes: {
-    events: Schema.Attribute.Component<
-      'home-page-components.timeline-group',
-      true
-    >;
-    title: Schema.Attribute.String;
-  };
-}
-
-export interface HomePageComponentsTimelineGroup
+export interface HomePageComponentsFeatureChipCard
   extends Struct.ComponentSchema {
-  collectionName: 'components_home_page_components_timeline_groups';
+  collectionName: 'components_home_page_components_feature_chip_cards';
   info: {
-    displayName: 'Timeline Group';
+    displayName: 'Feature Chip Card';
   };
   attributes: {
-    content: Schema.Attribute.Text;
+    chips: Schema.Attribute.Component<'shared.avatar', true>;
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface HomePageComponentsGadgetCard extends Struct.ComponentSchema {
+  collectionName: 'components_home_page_components_gadget_cards';
+  info: {
+    displayName: 'Gadget Card';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images'>;
+    label: Schema.Attribute.String;
+  };
+}
+
+export interface HomePageComponentsHowItWorkCard
+  extends Struct.ComponentSchema {
+  collectionName: 'components_home_page_components_how_it_work_cards';
+  info: {
+    displayName: 'How It Work Card';
+  };
+  attributes: {
+    backgroundColor: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.Media<'images'>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface HomePageComponentsInsightCard extends Struct.ComponentSchema {
+  collectionName: 'components_home_page_components_insight_cards';
+  info: {
+    displayName: 'Insight Card';
+  };
+  attributes: {
+    avatars: Schema.Attribute.Component<'shared.avatar', true>;
+    label: Schema.Attribute.String;
+    title: Schema.Attribute.String;
     year: Schema.Attribute.String;
+  };
+}
+
+export interface HomePageComponentsKpiBalance extends Struct.ComponentSchema {
+  collectionName: 'components_home_page_components_kpi_balances';
+  info: {
+    displayName: 'KPI Balance';
+  };
+  attributes: {
+    backgroundImage: Schema.Attribute.Media<'images'>;
+    label: Schema.Attribute.String;
+    value: Schema.Attribute.String;
+  };
+}
+
+export interface HomePageComponentsPremiumAccess
+  extends Struct.ComponentSchema {
+  collectionName: 'components_home_page_components_premium_accesses';
+  info: {
+    displayName: 'Premium Access';
+  };
+  attributes: {
+    button: Schema.Attribute.Component<'shared.cta-button', false>;
+    currencySuffix: Schema.Attribute.String;
+    priceMax: Schema.Attribute.String;
+    priceMin: Schema.Attribute.String;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface HomePageComponentsSavedCard extends Struct.ComponentSchema {
+  collectionName: 'components_home_page_components_saved_cards';
+  info: {
+    displayName: 'Saved Card';
+  };
+  attributes: {
+    button: Schema.Attribute.Component<'shared.cta-button', false>;
+    percentage: Schema.Attribute.Integer;
+    price: Schema.Attribute.String;
+  };
+}
+
+export interface HomePageComponentsTrackCard extends Struct.ComponentSchema {
+  collectionName: 'components_home_page_components_track_cards';
+  info: {
+    displayName: 'Track Card';
+  };
+  attributes: {
+    backgroundColor: Schema.Attribute.String;
+    text: Schema.Attribute.String;
+  };
+}
+
+export interface HomePageBannerSection extends Struct.ComponentSchema {
+  collectionName: 'components_home_page_banner_sections';
+  info: {
+    displayName: 'Banner Section';
+  };
+  attributes: {
+    backgroundColor: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'#000'>;
+    backgroundImage: Schema.Attribute.Media<'images'>;
+    text: Schema.Attribute.Text;
   };
 }
 
@@ -305,8 +422,13 @@ export interface HomePageBlogSection extends Struct.ComponentSchema {
     displayName: 'Blog Section';
   };
   attributes: {
+    articles: Schema.Attribute.Relation<'oneToMany', 'api::article.article'>;
     button: Schema.Attribute.Component<'shared.cta-button', false>;
     description: Schema.Attribute.String;
+    featureArticle: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::article.article'
+    >;
     sectionTag: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
@@ -331,10 +453,62 @@ export interface HomePageFeatureSection extends Struct.ComponentSchema {
     displayName: 'Feature Section';
   };
   attributes: {
-    features: Schema.Attribute.Component<
-      'home-page-components.feature-card',
-      true
+    clarityCard: Schema.Attribute.Component<
+      'home-page-components.feature-chip-card',
+      false
     >;
+    featureCard: Schema.Attribute.Component<'shared.card', false>;
+    proveCard: Schema.Attribute.Component<
+      'home-page-components.feature-chip-card',
+      false
+    >;
+    sectionTag: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    workflowCard: Schema.Attribute.Component<
+      'home-page-components.build-ai-card',
+      false
+    >;
+  };
+}
+
+export interface HomePageGadgetSection extends Struct.ComponentSchema {
+  collectionName: 'components_home_page_gadget_sections';
+  info: {
+    displayName: 'Gadget Section';
+  };
+  attributes: {
+    aiDevice: Schema.Attribute.Component<
+      'home-page-components.ai-device-card',
+      false
+    >;
+    aiPowered: Schema.Attribute.Component<
+      'home-page-components.ai-powered-card',
+      false
+    >;
+    awardWining: Schema.Attribute.Component<
+      'home-page-components.award-wining-card',
+      false
+    >;
+    gadet: Schema.Attribute.Component<
+      'home-page-components.gadget-card',
+      false
+    >;
+    insight: Schema.Attribute.Component<
+      'home-page-components.insight-card',
+      false
+    >;
+    kpi: Schema.Attribute.Component<'home-page-components.kpi-balance', false>;
+    premiumAccess: Schema.Attribute.Component<
+      'home-page-components.premium-access',
+      false
+    >;
+    progress: Schema.Attribute.Component<
+      'home-page-components.circular-progress',
+      false
+    >;
+    saved: Schema.Attribute.Component<'home-page-components.saved-card', false>;
+    title: Schema.Attribute.String;
+    track: Schema.Attribute.Component<'home-page-components.track-card', false>;
   };
 }
 
@@ -344,21 +518,14 @@ export interface HomePageHeroSection extends Struct.ComponentSchema {
     displayName: 'Hero Section';
   };
   attributes: {
-    description: Schema.Attribute.Text;
-    leftImage1: Schema.Attribute.Media<
+    backgroundImage: Schema.Attribute.Media<'images'>;
+    bannerImage: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
-    leftImage2: Schema.Attribute.Media<'images'>;
-    leftImage3: Schema.Attribute.Media<'images'>;
-    leftImage4: Schema.Attribute.Media<'images'>;
-    partnerLogos: Schema.Attribute.Media<'images', true>;
+    description: Schema.Attribute.Text;
     primaryButton: Schema.Attribute.Component<'shared.cta-button', false>;
     secondaryButton: Schema.Attribute.Component<'shared.cta-button', false>;
-    sectionTag: Schema.Attribute.String;
     title: Schema.Attribute.String;
-    trustedByMainText: Schema.Attribute.String;
-    trustedBySubText: Schema.Attribute.String;
-    trustedUsers: Schema.Attribute.Component<'shared.avatar', true>;
   };
 }
 
@@ -368,63 +535,50 @@ export interface HomePageHowItWorkSection extends Struct.ComponentSchema {
     displayName: 'How It Work Section';
   };
   attributes: {
-    features: Schema.Attribute.Component<
-      'home-page-components.feature-card',
+    button: Schema.Attribute.Component<'shared.cta-button', false>;
+    description: Schema.Attribute.Text;
+    items: Schema.Attribute.Component<
+      'home-page-components.how-it-work-card',
       true
     >;
     sectionTag: Schema.Attribute.String;
-    subtitle: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
 }
 
-export interface HomePageReviewSection extends Struct.ComponentSchema {
-  collectionName: 'components_home_page_review_sections';
+export interface HomePageIntegrationSection extends Struct.ComponentSchema {
+  collectionName: 'components_home_page_integration_sections';
   info: {
-    displayName: 'Review Section';
+    displayName: 'Integration Section';
   };
   attributes: {
+    backgroundImage: Schema.Attribute.Media<'images'>;
     button: Schema.Attribute.Component<'shared.cta-button', false>;
+    desciption: Schema.Attribute.Text;
+    sectionTag: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface HomePagePartnerSection extends Struct.ComponentSchema {
+  collectionName: 'components_home_page_partner_sections';
+  info: {
+    displayName: 'Partner Section';
+  };
+  attributes: {
+    partners: Schema.Attribute.Media<'images', true>;
+  };
+}
+
+export interface HomePageTestimonialSection extends Struct.ComponentSchema {
+  collectionName: 'components_home_page_testimonial_sections';
+  info: {
+    displayName: 'Testimonial Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
     reviews: Schema.Attribute.Relation<'oneToMany', 'api::review.review'>;
     sectionTag: Schema.Attribute.String;
-    title: Schema.Attribute.String;
-  };
-}
-
-export interface HomePageServiceSection extends Struct.ComponentSchema {
-  collectionName: 'components_home_page_service_sections';
-  info: {
-    displayName: 'Service Section';
-  };
-  attributes: {
-    ctaButton: Schema.Attribute.Component<'shared.cta-button', false>;
-    description: Schema.Attribute.Text;
-    featuredServices: Schema.Attribute.Component<
-      'home-page-components.service-card',
-      true
-    >;
-    sectionTag: Schema.Attribute.String;
-    services: Schema.Attribute.Component<
-      'home-page-components.service-card',
-      true
-    >;
-    title: Schema.Attribute.String;
-  };
-}
-
-export interface HomePageTimelineSection extends Struct.ComponentSchema {
-  collectionName: 'components_home_page_timeline_sections';
-  info: {
-    displayName: 'Timeline Section';
-  };
-  attributes: {
-    description: Schema.Attribute.Text;
-    sectionTag: Schema.Attribute.String;
-    timelineRange: Schema.Attribute.String;
-    timelines: Schema.Attribute.Component<
-      'home-page-components.timeline-card',
-      true
-    >;
     title: Schema.Attribute.String;
   };
 }
@@ -473,6 +627,18 @@ export interface SharedAvatar extends Struct.ComponentSchema {
   attributes: {
     image: Schema.Attribute.Media<'images'>;
     name: Schema.Attribute.String;
+  };
+}
+
+export interface SharedCard extends Struct.ComponentSchema {
+  collectionName: 'components_shared_cards';
+  info: {
+    displayName: 'Card';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images'>;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -626,23 +792,35 @@ declare module '@strapi/strapi' {
       'contact-page.get-in-touch': ContactPageGetInTouch;
       'contact-page.hero': ContactPageHero;
       'contact-page.info-card': ContactPageInfoCard;
+      'home-page-components.ai-device-card': HomePageComponentsAiDeviceCard;
+      'home-page-components.ai-powered-card': HomePageComponentsAiPoweredCard;
+      'home-page-components.award-wining-card': HomePageComponentsAwardWiningCard;
+      'home-page-components.build-ai-card': HomePageComponentsBuildAiCard;
+      'home-page-components.circular-progress': HomePageComponentsCircularProgress;
       'home-page-components.feature-card': HomePageComponentsFeatureCard;
-      'home-page-components.feature-item': HomePageComponentsFeatureItem;
-      'home-page-components.service-card': HomePageComponentsServiceCard;
-      'home-page-components.timeline-card': HomePageComponentsTimelineCard;
-      'home-page-components.timeline-group': HomePageComponentsTimelineGroup;
+      'home-page-components.feature-chip-card': HomePageComponentsFeatureChipCard;
+      'home-page-components.gadget-card': HomePageComponentsGadgetCard;
+      'home-page-components.how-it-work-card': HomePageComponentsHowItWorkCard;
+      'home-page-components.insight-card': HomePageComponentsInsightCard;
+      'home-page-components.kpi-balance': HomePageComponentsKpiBalance;
+      'home-page-components.premium-access': HomePageComponentsPremiumAccess;
+      'home-page-components.saved-card': HomePageComponentsSavedCard;
+      'home-page-components.track-card': HomePageComponentsTrackCard;
+      'home-page.banner-section': HomePageBannerSection;
       'home-page.blog-section': HomePageBlogSection;
       'home-page.faq-section': HomePageFaqSection;
       'home-page.feature-section': HomePageFeatureSection;
+      'home-page.gadget-section': HomePageGadgetSection;
       'home-page.hero-section': HomePageHeroSection;
       'home-page.how-it-work-section': HomePageHowItWorkSection;
-      'home-page.review-section': HomePageReviewSection;
-      'home-page.service-section': HomePageServiceSection;
-      'home-page.timeline-section': HomePageTimelineSection;
+      'home-page.integration-section': HomePageIntegrationSection;
+      'home-page.partner-section': HomePagePartnerSection;
+      'home-page.testimonial-section': HomePageTestimonialSection;
       'legal-page.hero': LegalPageHero;
       'legal-page.info-card': LegalPageInfoCard;
       'legal-page.section': LegalPageSection;
       'shared.avatar': SharedAvatar;
+      'shared.card': SharedCard;
       'shared.cta-button': SharedCtaButton;
       'shared.faq-item': SharedFaqItem;
       'shared.get-started': SharedGetStarted;

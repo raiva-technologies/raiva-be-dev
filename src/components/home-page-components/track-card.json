@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_home_page_components_track_cards",
+  "info": {
+    "displayName": "Track Card"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "backgroundColor": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

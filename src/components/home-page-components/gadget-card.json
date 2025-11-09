@@ -1,17 +1,14 @@
 {
-  "collectionName": "components_home_page_components_feature_cards",
+  "collectionName": "components_home_page_components_gadget_cards",
   "info": {
-    "displayName": "Feature Card"
+    "displayName": "Gadget Card"
   },
   "options": {},
   "attributes": {
-    "title": {
+    "label": {
       "type": "string"
     },
-    "description": {
-      "type": "text"
-    },
-    "icon": {
+    "image": {
       "type": "media",
       "multiple": false,
       "allowedTypes": [

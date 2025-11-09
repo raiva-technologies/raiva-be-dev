@@ -1,0 +1,63 @@
+{
+  "collectionName": "components_home_page_gadget_sections",
+  "info": {
+    "displayName": "Gadget Section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "track": {
+      "type": "component",
+      "component": "home-page-components.track-card",
+      "repeatable": false
+    },
+    "saved": {
+      "type": "component",
+      "component": "home-page-components.saved-card",
+      "repeatable": false
+    },
+    "premiumAccess": {
+      "type": "component",
+      "component": "home-page-components.premium-access",
+      "repeatable": false
+    },
+    "kpi": {
+      "type": "component",
+      "component": "home-page-components.kpi-balance",
+      "repeatable": false
+    },
+    "insight": {
+      "type": "component",
+      "component": "home-page-components.insight-card",
+      "repeatable": false
+    },
+    "gadet": {
+      "type": "component",
+      "component": "home-page-components.gadget-card",
+      "repeatable": false
+    },
+    "progress": {
+      "type": "component",
+      "component": "home-page-components.circular-progress",
+      "repeatable": false
+    },
+    "awardWining": {
+      "type": "component",
+      "component": "home-page-components.award-wining-card",
+      "repeatable": false
+    },
+    "aiPowered": {
+      "type": "component",
+      "component": "home-page-components.ai-powered-card",
+      "repeatable": false
+    },
+    "aiDevice": {
+      "type": "component",
+      "component": "home-page-components.ai-device-card",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

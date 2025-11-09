@@ -5,10 +5,31 @@
   },
   "options": {},
   "attributes": {
-    "features": {
+    "sectionTag": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "featureCard": {
       "type": "component",
-      "component": "home-page-components.feature-card",
-      "repeatable": true
+      "component": "shared.card",
+      "repeatable": false
+    },
+    "proveCard": {
+      "type": "component",
+      "component": "home-page-components.feature-chip-card",
+      "repeatable": false
+    },
+    "clarityCard": {
+      "type": "component",
+      "component": "home-page-components.feature-chip-card",
+      "repeatable": false
+    },
+    "workflowCard": {
+      "type": "component",
+      "component": "home-page-components.build-ai-card",
+      "repeatable": false
     }
   },
   "config": {}
