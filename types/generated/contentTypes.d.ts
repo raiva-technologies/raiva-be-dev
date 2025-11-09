@@ -531,6 +531,13 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    readMins: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 1;
+        },
+        number
+      >;
     slug: Schema.Attribute.UID<'title'>;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
@@ -848,7 +855,6 @@ export interface ApiReviewReview extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    avatar: Schema.Attribute.Component<'shared.avatar', false>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -860,6 +866,7 @@ export interface ApiReviewReview extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     location: Schema.Attribute.String;
+    person: Schema.Attribute.Component<'shared.avatar', false>;
     publishedAt: Schema.Attribute.DateTime;
     rating: Schema.Attribute.Integer;
     updatedAt: Schema.Attribute.DateTime;

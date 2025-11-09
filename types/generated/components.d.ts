@@ -364,6 +364,17 @@ export interface HomePageComponentsKpiBalance extends Struct.ComponentSchema {
   };
 }
 
+export interface HomePageComponentsPartnerItem extends Struct.ComponentSchema {
+  collectionName: 'components_home_page_components_partner_items';
+  info: {
+    displayName: 'Partner Item';
+  };
+  attributes: {
+    darkLogo: Schema.Attribute.Media<'images'>;
+    lightLogo: Schema.Attribute.Media<'images'>;
+  };
+}
+
 export interface HomePageComponentsPremiumAccess
   extends Struct.ComponentSchema {
   collectionName: 'components_home_page_components_premium_accesses';
@@ -566,7 +577,10 @@ export interface HomePagePartnerSection extends Struct.ComponentSchema {
     displayName: 'Partner Section';
   };
   attributes: {
-    partners: Schema.Attribute.Media<'images', true>;
+    partners: Schema.Attribute.Component<
+      'home-page-components.partner-item',
+      true
+    >;
   };
 }
 
@@ -660,8 +674,8 @@ export interface SharedFaqItem extends Struct.ComponentSchema {
     displayName: 'Faq Item';
   };
   attributes: {
-    description: Schema.Attribute.Text;
-    title: Schema.Attribute.String;
+    answer: Schema.Attribute.Text;
+    question: Schema.Attribute.String;
   };
 }
 
@@ -803,6 +817,7 @@ declare module '@strapi/strapi' {
       'home-page-components.how-it-work-card': HomePageComponentsHowItWorkCard;
       'home-page-components.insight-card': HomePageComponentsInsightCard;
       'home-page-components.kpi-balance': HomePageComponentsKpiBalance;
+      'home-page-components.partner-item': HomePageComponentsPartnerItem;
       'home-page-components.premium-access': HomePageComponentsPremiumAccess;
       'home-page-components.saved-card': HomePageComponentsSavedCard;
       'home-page-components.track-card': HomePageComponentsTrackCard;
