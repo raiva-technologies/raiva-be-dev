@@ -17,7 +17,7 @@
     "description": {
       "type": "text"
     },
-    "avatar": {
+    "person": {
       "type": "component",
       "component": "shared.avatar",
       "repeatable": false

@@ -5,10 +5,10 @@
   },
   "options": {},
   "attributes": {
-    "title": {
+    "question": {
       "type": "string"
     },
-    "description": {
+    "answer": {
       "type": "text"
     }
   },

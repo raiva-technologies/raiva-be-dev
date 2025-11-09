@@ -6,11 +6,9 @@
   "options": {},
   "attributes": {
     "partners": {
-      "type": "media",
-      "multiple": true,
-      "allowedTypes": [
-        "images"
-      ]
+      "type": "component",
+      "component": "home-page-components.partner-item",
+      "repeatable": true
     }
   },
   "config": {}
