@@ -1,17 +1,17 @@
 {
-  "collectionName": "components_home_page_components_feature_cards",
+  "collectionName": "components_home_page_components_kpi_balances",
   "info": {
-    "displayName": "Feature Card"
+    "displayName": "KPI Balance"
   },
   "options": {},
   "attributes": {
-    "title": {
+    "label": {
       "type": "string"
     },
-    "description": {
-      "type": "text"
+    "value": {
+      "type": "string"
     },
-    "icon": {
+    "backgroundImage": {
       "type": "media",
       "multiple": false,
       "allowedTypes": [

@@ -11,13 +11,18 @@
     "title": {
       "type": "string"
     },
-    "subtitle": {
-      "type": "string"
+    "description": {
+      "type": "text"
     },
-    "features": {
+    "items": {
       "type": "component",
-      "component": "home-page-components.feature-card",
+      "component": "home-page-components.how-it-work-card",
       "repeatable": true
+    },
+    "button": {
+      "type": "component",
+      "component": "shared.cta-button",
+      "repeatable": false
     }
   },
   "config": {}

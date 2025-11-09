@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_home_page_review_sections",
+  "collectionName": "components_home_page_integration_sections",
   "info": {
-    "displayName": "Review Section"
+    "displayName": "Integration Section"
   },
   "options": {},
   "attributes": {
@@ -11,15 +11,20 @@
     "title": {
       "type": "string"
     },
+    "desciption": {
+      "type": "text"
+    },
     "button": {
       "type": "component",
       "component": "shared.cta-button",
       "repeatable": false
     },
-    "reviews": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::review.review"
+    "backgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
     }
   },
   "config": {}

@@ -1,17 +1,17 @@
 {
-  "collectionName": "components_home_page_components_feature_items",
+  "collectionName": "components_home_page_components_circular_progresses",
   "info": {
-    "displayName": "Feature Item"
+    "displayName": "Circular Progress"
   },
   "options": {},
   "attributes": {
-    "title": {
+    "label": {
       "type": "string"
     },
-    "description": {
-      "type": "text"
+    "percent": {
+      "type": "integer"
     },
-    "icon": {
+    "image": {
       "type": "media",
       "multiple": false,
       "allowedTypes": [

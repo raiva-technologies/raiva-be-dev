@@ -751,13 +751,16 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
     sections: Schema.Attribute.DynamicZone<
       [
         'home-page.hero-section',
+        'home-page.faq-section',
+        'home-page.blog-section',
+        'home-page.partner-section',
+        'home-page.gadget-section',
+        'home-page.banner-section',
         'home-page.feature-section',
         'home-page.how-it-work-section',
-        'home-page.service-section',
-        'home-page.faq-section',
-        'home-page.timeline-section',
-        'home-page.review-section',
-        'home-page.blog-section',
+        'home-page.integration-section',
+        'shared.get-started',
+        'home-page.testimonial-section',
       ]
     >;
     seo: Schema.Attribute.Component<'shared.seo', false>;

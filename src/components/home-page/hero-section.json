@@ -5,20 +5,11 @@
   },
   "options": {},
   "attributes": {
-    "sectionTag": {
-      "type": "string"
-    },
     "title": {
       "type": "string"
     },
     "description": {
       "type": "text"
-    },
-    "trustedByMainText": {
-      "type": "string"
-    },
-    "trustedBySubText": {
-      "type": "string"
     },
     "primaryButton": {
       "type": "component",
@@ -30,12 +21,14 @@
       "component": "shared.cta-button",
       "repeatable": false
     },
-    "trustedUsers": {
-      "type": "component",
-      "component": "shared.avatar",
-      "repeatable": true
+    "backgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
     },
-    "leftImage1": {
+    "bannerImage": {
       "type": "media",
       "multiple": false,
       "allowedTypes": [
@@ -43,34 +36,6 @@
         "files",
         "videos",
         "audios"
-      ]
-    },
-    "leftImage2": {
-      "type": "media",
-      "multiple": false,
-      "allowedTypes": [
-        "images"
-      ]
-    },
-    "leftImage3": {
-      "type": "media",
-      "multiple": false,
-      "allowedTypes": [
-        "images"
-      ]
-    },
-    "leftImage4": {
-      "type": "media",
-      "multiple": false,
-      "allowedTypes": [
-        "images"
-      ]
-    },
-    "partnerLogos": {
-      "type": "media",
-      "multiple": true,
-      "allowedTypes": [
-        "images"
       ]
     }
   },

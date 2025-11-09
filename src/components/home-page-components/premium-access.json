@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_home_page_components_premium_accesses",
+  "info": {
+    "displayName": "Premium Access"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "priceMin": {
+      "type": "string"
+    },
+    "priceMax": {
+      "type": "string"
+    },
+    "currencySuffix": {
+      "type": "string"
+    },
+    "button": {
+      "type": "component",
+      "component": "shared.cta-button",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

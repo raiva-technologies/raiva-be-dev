@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_home_page_components_ai_powered_cards",
+  "info": {
+    "displayName": "AI Powered Card"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "backgroundColor": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

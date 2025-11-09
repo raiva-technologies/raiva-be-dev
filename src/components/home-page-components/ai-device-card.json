@@ -1,17 +1,17 @@
 {
-  "collectionName": "components_home_page_components_feature_cards",
+  "collectionName": "components_home_page_components_ai_device_cards",
   "info": {
-    "displayName": "Feature Card"
+    "displayName": "AI Device Card"
   },
   "options": {},
   "attributes": {
     "title": {
       "type": "string"
     },
-    "description": {
-      "type": "text"
+    "percentage": {
+      "type": "string"
     },
-    "icon": {
+    "image": {
       "type": "media",
       "multiple": false,
       "allowedTypes": [
