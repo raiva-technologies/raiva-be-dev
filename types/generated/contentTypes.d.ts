@@ -457,6 +457,7 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
         'about-page.mission-section',
         'about-page.experience-section',
         'about-page.about-section',
+        'shared.get-started',
       ]
     >;
     updatedAt: Schema.Attribute.DateTime;
