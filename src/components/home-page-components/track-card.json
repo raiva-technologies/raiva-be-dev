@@ -7,9 +7,6 @@
   "attributes": {
     "text": {
       "type": "string"
-    },
-    "backgroundColor": {
-      "type": "string"
     }
   },
   "config": {}
