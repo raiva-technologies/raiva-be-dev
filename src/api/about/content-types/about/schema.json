@@ -22,7 +22,8 @@
         "about-page.review-section",
         "about-page.mission-section",
         "about-page.experience-section",
-        "about-page.about-section"
+        "about-page.about-section",
+        "shared.get-started"
       ]
     }
   }
