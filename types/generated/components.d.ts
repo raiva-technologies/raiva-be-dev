@@ -247,7 +247,6 @@ export interface HomePageComponentsAiPoweredCard
     displayName: 'AI Powered Card';
   };
   attributes: {
-    backgroundColor: Schema.Attribute.String;
     label: Schema.Attribute.String;
   };
 }
@@ -259,7 +258,6 @@ export interface HomePageComponentsAwardWiningCard
     displayName: 'Award Wining Card';
   };
   attributes: {
-    backgroundColor: Schema.Attribute.String;
     label: Schema.Attribute.String;
   };
 }
@@ -409,7 +407,6 @@ export interface HomePageComponentsTrackCard extends Struct.ComponentSchema {
     displayName: 'Track Card';
   };
   attributes: {
-    backgroundColor: Schema.Attribute.String;
     text: Schema.Attribute.String;
   };
 }
