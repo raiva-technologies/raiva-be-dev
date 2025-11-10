@@ -615,6 +615,7 @@ export interface LegalPageInfoCard extends Struct.ComponentSchema {
     displayName: 'info-card';
   };
   attributes: {
+    background: Schema.Attribute.Media<'images'>;
     icon: Schema.Attribute.Component<'shared.icon', false>;
     info: Schema.Attribute.String;
     label: Schema.Attribute.String;
