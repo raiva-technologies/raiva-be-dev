@@ -19,6 +19,11 @@
     },
     "description": {
       "type": "string"
+    },
+    "getStarted": {
+      "type": "component",
+      "component": "shared.get-started",
+      "repeatable": false
     }
   }
 }
