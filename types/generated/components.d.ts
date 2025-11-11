@@ -613,7 +613,7 @@ export interface LegalPageInfoCard extends Struct.ComponentSchema {
   };
   attributes: {
     background: Schema.Attribute.Media<'images'>;
-    icon: Schema.Attribute.Component<'shared.icon', false>;
+    icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     info: Schema.Attribute.String;
     label: Schema.Attribute.String;
   };
