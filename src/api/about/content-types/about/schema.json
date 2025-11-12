@@ -25,6 +25,11 @@
         "about-page.about-section",
         "shared.get-started"
       ]
+    },
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
     }
   }
 }
